@@ -6,7 +6,8 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="css/normalize.css">
    <!-- <link rel="stylesheet" href="css/styles.css"> -->
-   <link rel="stylesheet" href="css/styles.min.css"> 
+   <link rel="stylesheet" href="css/styles.min.css">
+
    <title>Document</title>
 </head>
 
@@ -75,9 +76,8 @@
                <p class="hero-text">
                   Вам и Вашему любимцу множество услуг по диагностике, профилактике заболеваний по
                   лечению и уходу за Вашими животными. Профессионалы работающие в нашей клинике сделают все для того,
-                  чтобы
-                  быстро, эффективно и максимально безболезненно выполнить любие процедуры, которые необходимы Вашему
-                  домашнему любимцу.
+                  чтобы быстро, эффективно и максимально безболезненно выполнить любие процедуры, которые необходимы
+                  Вашему домашнему любимцу.
                </p>
                <a class="hero-link black-link" href="#services">Наши услуги</a>
             </div>
@@ -194,13 +194,13 @@
       <!-- GET-NOTIFIED -->
       <section class="get-notified">
          <div class="get-notified-container container">
-            <form action="https://echo.htmlacademy.ru" class="get-notified-form">
-               <h2 class="get-notified-heading">Будь в курсе событий</h2>
+            <h2 class="get-notified-heading">Будь в курсе событий</h2>
+            <form action="https://echo.htmlacademy.ru" class="get-notified-form" method="GET">
                <label class="email-input-label">
                   <input class="input-email" type="email" name="user_email" placeholder="Укажите Ваш email адрес"
-                     pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$" required> 
+                     pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$" required>
                </label>
-               <button class="black-link" type="submit">Подписаться</button>
+               <button class="black-link get-notified-link" type="submit">Подписаться</button>
             </form>
          </div>
       </section>
@@ -209,34 +209,51 @@
          <div class="articles-container container">
             <h2 class="articles-heading">Полезные статьи</h2>
             <ul class="articles-list">
-               <li class="article">
-                  <time datetime="2008-02-14 20:00">28.08.2020</time>
-                  <h3>Ультразвуковая чистка зубов</h3>
-                  <p class="read-more">
-                     Появление в доме котенка приятное и радосное событие. Но не всегда этот пушистый зверек берется от
-                     ...
-                  </p>
-                  <a href="#" class="read-more-link">Читать больше</a>
+               <li class="article article-small">
+                  <img class="small-article-img" src="img/article1.jpg"
+                     srcset="img/article1.jpg 1x, img/article1@2x.jpg 2x" alt="Cool cat" width="305" height="180">
+                  <div class="article-small-text">
+                     <time class="article-time" datetime="2008-02-14 20:00">28.08.2020</time>
+                     <h3 class="article-heading article-small-heading">Ультразвуковая чистка зубов</h3>
+                     <p class="read-more-small">
+                        Появление в доме котенка приятное и радосное событие. Но не всегда этот пушистый зверек берется
+                        от
+                        ...
+                     </p>
+                     <a href="#" class="read-more-link">Читать больше</a>
+                  </div>
                </li>
-               <li class="article">
-                  <time datetime="2008-02-14 20:00">28.08.2020</time>
-                  <h3>Перед тем как завести собаку</h3>
-                  <p class="read-more">
-                     Появление в доме котенка приятное и радосное событие. Но не всегда этот пушистый зверек берется от
-                     заводчиков, Бивают и ситуации когда животное находят на улице и дают ему теплый дом. И первым
-                     вопросом, который возникает у новых хозяев – как определить возраст котенка. Появление в доме
-                     котенка приятное и радосное событие.
-                  </p>
-                  <a href="#" class="read-more-link">Читать больше</a>
+               <li class="article article-big">
+                  <img class="big-article-img" src="img/article2.jpg"
+                     srcset="img/article2.jpg 1x, img/article2@2x.jpg 2x" alt="Cool cat" width="305" height="435">
+                  <div class="article-big-right">
+                     <span class="article-big-hashtags">#собака</span>
+                     <span class="article-big-hashtags">#дом</span>
+                     <span class="article-big-hashtags">#уход</span>
+                     <time class="article-big-time" datetime="2008-02-14 20:00">28.08.2020</time>
+                     <h3 class="article-heading article-big-heading">Перед тем как завести собаку</h3>
+                     <p class="read-more-big">
+                        Появление в доме котенка приятное и радосное событие. Но не всегда этот пушистый зверек берется
+                        от
+                        заводчиков, Бивают и ситуации когда животное находят на улице и дают ему теплый дом. И первым
+                        вопросом, который возникает у новых хозяев – как определить возраст котенка. Появление в доме
+                        котенка приятное и радосное событие.
+                     </p>
+                     <a href="#" class="read-more-link">Читать больше</a>
+                  </div>
                </li>
-               <li class="article">
-                  <time datetime="2008-02-14 20:00">28.08.2020</time>
-                  <h3>Когда привавать питомца?</h3>
-                  <p class="read-more">
-                     Появление в доме котенка приятное и радосное событие. Но не всегда этот пушистый
-                     зверек берется от ...
-                  </p>
-                  <a href="#" class="read-more-link">Читать больше</a>
+               <li class="article article-small">
+                  <img class="small-article-img" src="img/article3.jpg"
+                     srcset="img/article3.jpg 1x, img/article3@2x.jpg 2x" alt="Cool cat" width="305" height="180">
+                  <div class="article-small-text">
+                     <time class="article-time" datetime="2008-02-14 20:00">28.08.2020</time>
+                     <h3 class="article-heading article-small-heading">Когда привавать питомца?</h3>
+                     <p class="read-more-small">
+                        Появление в доме котенка приятное и радосное событие. Но не всегда этот пушистый
+                        зверек берется от ...
+                     </p>
+                     <a href="#" class="read-more-link">Читать больше</a>
+                  </div>
                </li>
             </ul>
          </div>
@@ -244,22 +261,30 @@
       <!-- ASK-QUESTION -->
       <section class="ask-question-section">
          <div class="ask-qurstion-container container">
-            <form action="https://echo.htmlacademy.ru" class="ask-question-form">
-               <h2 class="ask-question-heading">Обратная связь</h2>
-               <p class="ask-question-text">
-                  При возникновении вопросов по поводу работы клиники или консультаций, заполните форму ниже:
-               </p>
-               <label class="name-input-label">
-                  <input class="input-name" type="text" name="user_name" placeholder="Ваше имя" required>
-               </label>
-               <label class="email-input-label">
-                  <input class="input-email" type="email" name="user_email" placeholder="Email для обратной связи"
-                     pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$" required>
-               </label>
-               <textarea name="question" minlength="2" cols="30" rows="10" placeholder="Опишите Ваш вопрос.">
+            <a class="map-link"
+               href="https://yandex.uz/maps/10335/tashkent/house/YkAYdAJgSEcPQFprfX9zd3hjbQ==/?ll=69.250128%2C41.326409&z=16">
+               <img class="map" src="img/map.jpg" srcset="img/map.jpg 1x, img/map@2x.jpg 2x"
+                  alt="Location of company in card" width="462" height="652">
+            </a>
+            <form action="https://echo.htmlacademy.ru" class="ask-question-form" method="GET">
+               <div class="ask-question-content">
+                  <h2 class="ask-question-heading">Обратная связь</h2>
+                  <p class="ask-question-text">
+                     При возникновении вопросов по поводу работы клиники или консультаций, заполните форму ниже:
+                  </p>
+                  <label class="name-input-label">
+                     <input class="input" type="text" name="user_name" placeholder="Ваше имя" required>
+                  </label>
+                  <label class="email-input-label">
+                     <input class="input i" type="email" name="user_email" placeholder="Email для обратной связи"
+                        pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$" required>
+                  </label>
+                  <textarea class="question-area" name="question" minlength="2" cols="30" rows="10">
+                  Опишите Ваш вопрос. 
                   Например: в каком возрасте можно прививать от бешенства?
-               </textarea>
-               <button class="black-link" type="submit">Задать нам вопрос</button>
+                  </textarea>
+                  <button class="yellow-link" type="submit">Задать нам вопрос</button>
+               </div>
             </form>
          </div>
       </section>
