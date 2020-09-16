@@ -251,8 +251,8 @@ img {
 
 .active-nav-list-link::before {
    display: inline-block;
-   width: 15px;
-   height: 15px;
+   width: 20px;
+   height: 20px;
    margin-right: 12px;
    background-image: url("../img/active-navlink.svg");
    background-position: center center;
@@ -343,11 +343,10 @@ img {
 }
 
 .hero {
-   background-image: url("../img/hero-back@2x.png");
+   background-image: url("../img/hero-bg-left.png"), url("../img/hero-bg-right.png");
    background-repeat: no-repeat;
-   background-position: calc(50%) center;
-   background-repeat: no-repeat;
-   background-size: contain;
+   background-position: left calc(50% - 500px) top -100px,
+   right calc(50% - 600px) bottom;
 }
 
 .hero-container {
