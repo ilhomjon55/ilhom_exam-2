@@ -83,7 +83,7 @@ img {
    max-width: 1350px;
    margin: 0 auto;
    padding: 0 20px;
-}>
+}
 .site-header {
    background-color: #F9F8F8;
 }
@@ -112,7 +112,7 @@ img {
    font-size: 14px;
    line-height: 18px;
    color: #333333;
-   3cursor: pointer;
+   cursor: pointer;
 }
 
 .header-top-links:hover {
