@@ -83,10 +83,7 @@ img {
    max-width: 1350px;
    margin: 0 auto;
    padding: 0 20px;
-}
-
-/* ===== SITE-HEADER ===== */
-
+}>
 .site-header {
    background-color: #F9F8F8;
 }
@@ -115,6 +112,15 @@ img {
    font-size: 14px;
    line-height: 18px;
    color: #333333;
+   3cursor: pointer;
+}
+
+.header-top-links:hover {
+   color: #FFBD54;
+}
+
+.header-top-links:active {
+   opacity: 0.5;
 }
 
 .header-top-address {
@@ -345,8 +351,7 @@ img {
 .hero {
    background-image: url("../img/hero-bg-left.png"), url("../img/hero-bg-right.png");
    background-repeat: no-repeat;
-   background-position: left calc(50% - 500px) top -100px,
-   right calc(50% - 600px) bottom;
+   background-position: left calc(50% - 535px) top -100px, right calc(50% - 700px) bottom -35px;
 }
 
 .hero-container {
@@ -467,6 +472,7 @@ img {
    position: relative;
    z-index: 1;
    width: 1223px;
+   margin: 0 auto;
 }
 
 .slider-track {
@@ -615,7 +621,7 @@ img {
    width: 1223px;
    display: flex;
    align-items: center;
-   margin: 0;
+   margin: 0 auto;
    padding: 41px 35px;
    background-color: #fff;
 }
@@ -704,11 +710,22 @@ img {
    padding-right: 22px;
    padding-left: 22px;
    background: #FFFFFF;
-   border: none;
+   border: 2px solid transparent;
+   outline: 0;
    border-radius: 5px;
 }
 
-.input-email::placeholde {
+.input-email:not(:placeholder-shown):invalid {
+   border-color: #D81D04;
+   color: #D81D04;
+}
+
+.input-email:valid {
+   border-color: #00B031;
+   color: #00B031;
+}
+
+.input-email::placeholder {
    display: block;
    font-size: 16px;
    line-height: 20px;
@@ -931,7 +948,18 @@ img {
    padding-right: 22px;
    padding-left: 22px;
    background: #FFFFFF;
-   border: none;
+   border: 2px solid transparent;
+   outline: 0;
+}
+
+.input:not(:placeholder-shown):invalid {
+   border-color: #D81D04;
+   color: #D81D04;
+}
+
+.input:valid {
+   border-color: #00B031;
+   color: #00B031;
 }
 
 .input::placeholder {
@@ -1023,6 +1051,7 @@ img {
 
 .footer-time-links:nth-of-type(1)::before {
    position: absolute;
+   top: 3px;
    right: 100%;
    display: inline-block;
    width: 13px;
@@ -1048,6 +1077,7 @@ img {
 
 .footer-top-address::before {
    position: absolute;
+   top: 3px;
    right: 100%;
    display: inline-block;
    width: 13px;
@@ -1078,6 +1108,7 @@ img {
 
 .footer-tel-links-box::before {
    position: absolute;
+   top: 3px;
    right: 100%;
    display: inline-block;
    width: 13px;
