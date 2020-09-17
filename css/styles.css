@@ -710,7 +710,7 @@ img {
    padding-right: 22px;
    padding-left: 22px;
    background: #FFFFFF;
-   border: 1px solid transparent;
+   border: 2px solid transparent;
    outline: 0;
    border-radius: 5px;
 }
