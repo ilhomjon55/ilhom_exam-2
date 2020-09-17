@@ -710,19 +710,17 @@ img {
    padding-right: 22px;
    padding-left: 22px;
    background: #FFFFFF;
-   border: 2px solid transparent;
+   border: 1px solid transparent;
    outline: 0;
    border-radius: 5px;
 }
 
 .input-email:not(:placeholder-shown):invalid {
    border-color: #D81D04;
-   color: #D81D04;
 }
 
 .input-email:valid {
    border-color: #00B031;
-   color: #00B031;
 }
 
 .input-email::placeholder {
@@ -954,12 +952,10 @@ img {
 
 .input:not(:placeholder-shown):invalid {
    border-color: #D81D04;
-   color: #D81D04;
 }
 
 .input:valid {
    border-color: #00B031;
-   color: #00B031;
 }
 
 .input::placeholder {
@@ -977,7 +973,15 @@ img {
    text-align: left;
    font-size: 16px;
    line-height: 21px;
-   color: #DBDBDB;
+   outline-color:#00B031;
+   color: #949494;
+}
+.ask-question-but{
+   border: none ;
+}
+.ask-question-but:hover{
+   background-color: #FFBD54;
+   opacity: 0.9;
 }
 
 /*  ===== SITE-FOOTER ===== */
@@ -1031,7 +1035,7 @@ img {
    background: #FFBD54;
 }
 
-.footer-list-links:hover {
+.footer-list-links:active {
    background: rgba(255, 189, 84, 0.5);
 }
 
@@ -1047,6 +1051,9 @@ img {
    font-size: 14px;
    line-height: 18px;
    margin-bottom: 4px;
+}
+.footer-time-links:hover{
+   color: #FFBD54;
 }
 
 .footer-time-links:nth-of-type(1)::before {
@@ -1073,6 +1080,9 @@ img {
    font-style: normal;
    font-size: 14px;
    line-height: 18px;
+}
+.footer-top-address:hover{
+   color: #FFBD54;
 }
 
 .footer-top-address::before {
@@ -1105,7 +1115,9 @@ img {
    margin-bottom: 4px;
    color: #333333;
 }
-
+.footer-tel-links:hover{
+   color: #FFBD54;
+}
 .footer-tel-links-box::before {
    position: absolute;
    top: 3px;
