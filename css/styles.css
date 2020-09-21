@@ -92,7 +92,7 @@ img {
 }
 
 .header-top-list {
-  width: 1120px;
+  max-width: 1120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -129,6 +129,7 @@ img {
 .header-top-address {
   font-style: normal;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .header-top-address:before {
@@ -141,6 +142,10 @@ img {
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
+}
+
+.header-top-tel {
+  white-space: nowrap;
 }
 
 .header-top-tel:not(:last-child) {
@@ -170,7 +175,13 @@ img {
   border-radius: 50%;
 }
 
-.header-top-items:nth-child(3)::before {
+
+.header-top-time {
+  margin-right: 17px;
+  white-space: nowrap;
+}
+
+.header-top-time:nth-child(1)::before {
   display: inline-block;
   width: 14px;
   height: 14px;
@@ -180,10 +191,6 @@ img {
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
-}
-
-.header-top-time {
-  margin-right: 17px;
 }
 
 /* HEDER-MAIN */
@@ -196,6 +203,8 @@ img {
   position: relative;
   z-index: 1;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   padding-left: 180px;
 }
@@ -223,11 +232,11 @@ img {
 }
 
 .nav-list {
-  width: 776px;
+  max-width: 776px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   list-style-type: none;
 }
@@ -365,7 +374,7 @@ img {
 }
 
 .hero-right-wrapper {
-  width: 608px;
+  max-width: 608px;
   margin-left: auto;
 }
 
@@ -404,16 +413,14 @@ img {
 }
 
 .quote {
-  position: relative;
-  z-index: 1;
   display: block;
   padding: 0;
   padding-top: 43px;
   margin: 0;
 }
 
-.quote::before,
-.quote::after {
+.quote-text::before,
+.quote-text::after {
   position: absolute;
   z-index: 1;
   width: 142px;
@@ -424,24 +431,26 @@ img {
   content: "";
 }
 
-.quote::before {
+.quote-text::before {
   position: absolute;
   z-index: 1;
-  top: 0;
-  left: 135px;
+  top: -70px;
+  left: -15%;
   background-image: url("../img/left-quote.svg");
 }
 
-.quote::after {
+.quote-text::after {
   position: absolute;
   z-index: 1;
-  bottom: 0;
-  right: 135px;
+  bottom: -70px;
+  right: -15%;
   background-image: url("../img/right-quote.svg");
 }
 
 .quote-text {
-  width: 753px;
+  position: relative;
+  z-index: 1;
+  max-width: 753px;
   margin: 0 auto;
   margin-bottom: 35px;
   font-size: 20px;
@@ -920,9 +929,6 @@ img {
   text-overflow: none;
 }
 
-
-
-
 /* ASK-QUESTION */
 
 .ask-question-section {
@@ -1266,6 +1272,10 @@ only screen and (min-resolution: 2dppx) {
     width: 200px;
   }
 
+
+
+  /* ARTICLES-SECTION */
+
   .articles__list {
     display: flex;
     flex-wrap: wrap;
@@ -1274,8 +1284,6 @@ only screen and (min-resolution: 2dppx) {
     padding: 0;
     list-style-type: none;
   }
-
-  /* ARTICLES-SECTION */
 
   .articles__heading {
     margin-bottom: 110px;
@@ -1399,11 +1407,74 @@ only screen and (min-resolution: 2dppx) {
     font-size: 55px;
   }
 
+  .hero {
+    background-position: left calc(50% - 361px) top -85px, right calc(50% - 550px) bottom 0px;
+    background-size: 670px 590px, 354px 389px;
+  }
+}
 
 
+
+
+
+@media (max-width: 1150px) {
+  .header-top-list {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+
+  }
+
+  .header-top-items {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .header-top-address {
+    display: block;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  .header-top-tel {
+    display: block;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  .header-top-time {
+    display: block;
+    margin: 0
+  }
+
+  .header-top-time+.header-top-time {
+    margin-left: 10px;
+  }
+
+  .slider-wrapper {
+    width: 820px;
+  }
+
+  .active-slide-info {
+    width: 820px;
+  }
 }
 
 @media (max-width: 1050px) {
+  .hero {
+    background-image: none;
+  }
+
+  .hero-container {
+    padding-bottom: 100px;
+  }
+
+  .hero-right-wrapper {
+    max-width: 608px;
+    margin: 0 auto;
+  }
 
   .articles__list {
     display: block;
@@ -1452,6 +1523,12 @@ only screen and (min-resolution: 2dppx) {
 }
 
 @media (max-width: 780px) {
+
+  .hero-heading {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
   .article {
     width: 70%;
     display: flex;
@@ -1502,5 +1579,20 @@ only screen and (min-resolution: 2dppx) {
 
   .active-article .article__img {
     max-height: 280px;
+  }
+
+  .header-top-items {
+    flex-direction: column;
+  }
+
+  .header-top-tel.header-top-tel {
+    margin-right: 0;
+  }
+
+  .header-top-items:nth-child(3) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 270px;
+    margin: 0 auto;
   }
 }
