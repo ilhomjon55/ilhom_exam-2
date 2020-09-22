@@ -1380,6 +1380,158 @@ img {
   background-color: #78C0DE;
 }
 
+
+
+/*  ===== OPEN-SERVICE.HTML =====  */
+.open-service__background {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* OPEN-SERVICE__SECTION */
+
+.open-service__section .container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 35px;
+  padding-bottom: 175px;
+  padding-left: 230px;
+}
+
+.open-service__article {
+  max-width: 640px;
+  margin-right: auto;
+}
+
+.open-service__nav {
+  display: flex;
+  align-items: center;
+  margin-bottom: 33px;
+}
+
+.open-service__nav-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 18px;
+  color: #949494;
+}
+
+.open-service__nav-link+.open-service__nav-link {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 7px;
+}
+
+.open-service__nav-link+.open-service__nav-link::before {
+  min-width: 3px;
+  height: 3px;
+  display: block;
+  margin-right: 7px;
+  background-color: #FFBD54;
+  border-radius: 50%;
+  content: "";
+}
+
+.open-service__nav-link--active {
+  color: #333333;
+}
+
+.open-service__heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 70px;
+  line-height: 64px;
+  color: #333333;
+}
+
+.heading--yellow {
+  color: #FFBD54;
+}
+
+.open-service__text {
+  margin-top: 0;
+  margin-bottom: 22px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #949494;
+}
+
+.open-service__links {
+  margin-top: 42px;
+}
+
+.open-service__links .link--price {
+  margin-right: 21px;
+}
+
+/* LINK-PRICE */
+
+.link--price {
+  width: 185px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+  background-color: #FFBD54;
+  border-radius: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.link--price::before {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  margin-right: 7px;
+  background-image: url("../img/icon-money-box.png");
+  content: "";
+}
+
+/* LINK-REGISTRATION */
+
+.link--registration {
+  width: 241px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+  background-color: #333333;
+  border-radius: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.link--registration::before {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  margin-right: 7px;
+  background-image: url("../img/icon-document.svg");
+  content: "";
+}
+
+.more-articles .article {
+  margin: 0 auto;
+}
+
+.more-articles .article:nth-child(1) {
+  margin-bottom: 10px;
+}
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min--moz-device-pixel-ratio: 2),
 only screen and (-o-min-device-pixel-ratio: 2/1),
@@ -1598,7 +1750,13 @@ only screen and (min-resolution: 2dppx) {
     background-position: left calc(50% - 361px) top -85px, right calc(50% - 550px) bottom 0px;
     background-size: 670px 590px, 354px 389px;
   }
+
+  /* OPEN-SERVICE.HTML */
+  .open-service__section .container {
+    padding-left: 20px;
+  }
 }
+
 
 
 
@@ -1707,7 +1865,18 @@ only screen and (min-resolution: 2dppx) {
   .active-article .article__paragraph {
     width: 100%;
   }
+
+  /* OPEN-SERVICE.HTML */
+  .open-service__section .container {
+    flex-direction: column;
+  }
+
+  .open-service__article {
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
 }
+
 
 @media (max-width: 780px) {
 
@@ -1746,7 +1915,18 @@ only screen and (min-resolution: 2dppx) {
     object-position: center bottom;
   }
 
+  /* OPEN-SERVICE.HTML */
+  .open-service__heading {
+    font-size: 45px;
+  }
+
+  .open-service__links .link--price {
+    display: flex;
+    margin: 0;
+    margin-bottom: 20px;
+  }
 }
+
 
 @media (max-width: 500px) {
   .articles__heading {
@@ -1781,5 +1961,16 @@ only screen and (min-resolution: 2dppx) {
     flex-wrap: nowrap;
     max-width: 270px;
     margin: 0 auto;
+  }
+
+  /* OPEN-SERVICE.HTML */
+  .open-service__heading {
+    font-size: 32px;
+  }
+
+  .open-service__text {
+    font-size: 15px;
+    line-height: 1;
+    margin-bottom: 10px;
   }
 }
