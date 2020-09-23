@@ -1498,30 +1498,42 @@ img {
 /* LINK-REGISTRATION */
 
 .link--registration {
-  width: 241px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
+  min-width: 250px;
+  width: 100%;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 21px;
-  color: #FFFFFF;
-  background-color: #333333;
+  padding: 15px;
+ 
   border-radius: 3px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+
 }
 
-.link--registration::before {
+.button-content {
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  background-color: #333333;
+
+}
+
+.button-content::before {
   display: inline-block;
   width: 21px;
   height: 21px;
   margin-right: 7px;
   background-image: url("../img/icon-document.svg");
   content: "";
+}
+
+.button-text {
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
 }
 
 .more-articles .article {
