@@ -53,21 +53,10 @@
           </p>
           <div class="open-service__links">
             <a class="link--price link--yellow" href="price.html">Узнать цену</a>
-            <a class="link--registration link--black" href="registration.html">
-              <span class="button-content">
-                <span class="button-text">   
-                  qwqdqd
-                  qdqd
-                  qwqdqd
-                  qdqd
-                  qwqdqd
-                  qdqd
-                </span>
-              </span>
-            </a>
+            <a class="link--registration link--regisration-icon" href="registration.html">Записаться на приём</a>
           </div>
         </article>
-        <aside class="more-articles">
+        <div class="more-articles">
           <article class="article">
             <img class="article__img" src="img/article1.jpg" alt="Image of pets" width="305" height="180">
             <div class="article__info">
@@ -106,7 +95,35 @@
               <a class="article__link" href="#">Читать больше</a>
             </div>
           </article>
-        </aside>
+        </div>
+      </div>
+    </section>
+    <!-- REGISTRATION SECTION -->
+    <section class="registration__section">
+      <div class="container">
+        <form action="https://echo.htmlacademy.ru" class="registration__form" method="GET">
+          <div class="registration__content">
+            <div class="registration__left">
+              <h2 class="registration__heading">Остались вопросы?</h2>
+              <p class="registration__text">
+                Напишите нам
+              </p>
+            </div>
+            <div class="registration__right">
+              <label class="label__wrapper registration__label">
+                <input class="registration__input" type="text" name="user_name" placeholder="Ваше имя"
+                  spellcheck="false" required>
+              </label>
+              <label class="label__wrapper registration__label">
+                <input class="registration__input" type="email" name="user_email" placeholder="Email для обратной связи"
+                  pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$" spellcheck="false" required>
+              </label>
+              <textarea class="registration__textarea" name="question" minlength="2" cols="30" rows="10">Опишите Ваш вопрос.Например: в каком возрасте можно прививать от бешенства?
+                 </textarea>
+              <button class="link--black registration__button" type="submit">Задать нам вопрос</button>
+            </div>
+          </div>
+        </form>
       </div>
     </section>
   </main>
