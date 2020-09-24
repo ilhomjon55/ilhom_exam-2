@@ -1418,6 +1418,10 @@ img {
   color: #949494;
 }
 
+.open-service__nav-link:hover {
+  color: #333333;
+}
+
 .open-service__nav-link+.open-service__nav-link {
   display: inline-flex;
   align-items: center;
