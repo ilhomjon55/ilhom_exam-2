@@ -2092,6 +2092,14 @@ only screen and (min-resolution: 2dppx) {
   .registration__right {
     margin: 0 auto;
   }
+
+  .contacts__hero .hero__info {
+    margin: 0 auto;
+  }
+
+  .contacts__hero .hero__heading {
+    font-size: 45px;
+  }
 }
 
 
@@ -2155,6 +2163,12 @@ only screen and (min-resolution: 2dppx) {
 
   .registration__right {
     width: 350px;
+  }
+
+  .service {
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 }
