@@ -944,7 +944,8 @@ img {
 
 .map {
   width: auto;
-  height: 100%
+  height: 100%;
+  object-fit: cover;
 }
 
 .ask-question-form {
@@ -1102,6 +1103,7 @@ img {
   font-size: 14px;
   line-height: 18px;
   margin-bottom: 4px;
+  white-space: nowrap;
 }
 
 .footer-time-links:hover {
@@ -1126,12 +1128,13 @@ img {
 .footer-top-address {
   position: relative;
   z-index: 1;
-  width: 157px;
+  max-width: 150px;
   margin-right: 87px;
   font-weight: 500;
   font-style: normal;
   font-size: 14px;
   line-height: 18px;
+
 }
 
 .footer-top-address:hover {
@@ -1167,6 +1170,7 @@ img {
   line-height: 18px;
   margin-bottom: 4px;
   color: #333333;
+  white-space: nowrap;
 }
 
 .footer-tel-links:hover {
@@ -1962,6 +1966,41 @@ only screen and (min-resolution: 2dppx) {
   .active-slide-info {
     width: 820px;
   }
+
+  /* ASK-QUESTION */
+  .ask-qurstion-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .map {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 1150px) {
+
+  /* GET-NOTIFIED */
+  .get-notified-container {
+    width: 100%;
+    width: 700px;
+    margin: 0 auto;
+
+  }
+
+  .get-notified-heading {
+    line-height: 1;
+  }
+
+  .get-notified-container::after {
+    display: none;
+  }
+
+  .input-email {
+    width: 200px;
+    margin-right: 30px;
+  }
 }
 
 @media (max-width: 1050px) {
@@ -2023,15 +2062,7 @@ only screen and (min-resolution: 2dppx) {
     width: 100%;
   }
 
-  /* GET-NOTIFIED */
-  .get-notified-container::after {
-    display: none;
-  }
 
-  .input-email {
-    width: 200px;
-    margin-right: 30px;
-  }
 
   /* OPEN-SERVICE.HTML */
   .open-service__section .container {
@@ -2097,7 +2128,19 @@ only screen and (min-resolution: 2dppx) {
   }
 
   /* GET-NOTIFIED */
+
+  .get-notified-container {
+    width: 100%;
+    width: 400px;
+    margin: 0 auto;
+
+  }
+
   .get-notified-heading {
+    width: 100%;
+    white-space: wrap;
+    margin: 0 auto;
+    margin-bottom: 20px;
     font-size: 32px;
     line-height: 1.2;
   }
@@ -2105,11 +2148,17 @@ only screen and (min-resolution: 2dppx) {
   .get-notified-form {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .input-email {
-    width: 100%;
+    width: 300px;
     margin-bottom: 20px;
+  }
+
+  .get-notified-link {
+    width: 300px;
   }
 
   /* OPEN-SERVICE.HTML */
@@ -2148,6 +2197,85 @@ only screen and (min-resolution: 2dppx) {
   }
 }
 
+@media (max-width: 700px) {
+
+  /* SLIDER */
+  .slider-wrapper {
+    max-width: 400px;
+  }
+
+  .active-slide-info {
+    flex-direction: column;
+    max-width: 400px;
+  }
+
+  .active-slide-text {
+    width: 100%;
+  }
+
+  /* ASK-QUESTION */
+
+  .ask-question-form {
+    padding: 50px;
+  }
+
+  /* FOOTER */
+  .footer-left {
+    justify-content: space-between;
+  }
+
+  .footer-logo-link {
+    margin-right: 0;
+  }
+
+  .footer-list.footer-list {
+    margin: 0;
+  }
+
+  .footer-right {
+    justify-content: center;
+  }
+
+  .footer-time-links-box {
+    margin-right: 0;
+  }
+
+}
+
+@media (max-width: 550px) {
+  .ask-question-heading {
+    font-size: 32px;
+    line-height: 1;
+  }
+
+  .ask-question-content {
+    width: 250px;
+  }
+
+  /* FOOTER */
+  .footer-left {
+    flex-wrap: wrap;
+  }
+
+  .footer-right {
+    flex-wrap: wrap;
+  }
+
+  .footer-time-links-box {
+
+    margin-bottom: 20px;
+  }
+
+  .footer-top-address {
+    margin: 0;
+  }
+
+  /* FOOTER */
+
+  .footer-top-address {
+    width: 100px;
+  }
+}
 
 @media (max-width: 500px) {
 
@@ -2223,4 +2351,63 @@ only screen and (min-resolution: 2dppx) {
   .quote-text::after {
     display: none;
   }
+
+  /* SLIDER */
+  .slider-wrapper {
+    max-width: 200px;
+  }
+
+  .active-slide-info {
+    display: none;
+  }
+
+  /* FOOTER */
+
+  .footer-logo-link {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .footer-top-address {
+    margin-right: 15px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 355px) {
+
+  .hero-heading {
+    font-size: 32px;
+    line-height: 1;
+  }
+
+  .services-heading {
+    font-size: 32px;
+    line-height: 1;
+  }
+
+  .get-notified-heading {
+    font-size: 24px;
+  }
+
+  .input-email {
+    width: 280px;
+  }
+
+  .get-notified-link {
+    width: 280px;
+  }
+
+  .ask-question-heading {
+    font-size: 24px;
+  }
+
+  .ask-question-content {
+    width: 215px;
+  }
+
+
 }
